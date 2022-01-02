@@ -1,0 +1,10 @@
+---
+---
+
+@import "{{ site.theme }}";
+.footer-col-1 {
+    width: calc(25% - (30px / 2));
+}
+.footer-col-2 {
+    width: calc(30% - (30px / 2));
+}

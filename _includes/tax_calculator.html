@@ -1,0 +1,122 @@
+<script src="../calculator/taxes.js"></script>
+<script>
+    function computeNetIncome() {
+        let grossIncome = document.getElementById("gross_income").value;
+        let region = document.getElementById("region").value;
+        let hasDependentSpouse = document.getElementById("has_dependent_spouse").value === "yes";
+        let region = document.getElementById("region").value;
+        let childrenBelow3 = document.getElementById("children_below_3").value;
+        let childrenAbove3 = document.getElementById("children_above_3").value;
+        let childrenBelow3WithHandicap = document.getElementById("children_below_3_handicap").value;
+        let childrenAbove3WithHandicap = document.getElementById("children_above_3_handicap").value;
+        let childrenPercentage = document.getElementById("children_percentage").value;
+        let otherRelatives = document.getElementById("other_relatives").value;
+        let monthlyPayments = document.getElementById("monthly_payments").value;
+        let daysWithContract = document.getElementById("days_with_contract").value;
+    }
+</script>
+<div>
+    <form action="" name="tax_calculator">
+        <fieldset>
+            <div>
+                <label for="gross_income">Stipendio annuo lordo:</label>
+                <input type="number" min="0" value="24000" tabindex="1" id="gross_income" name="gross_income"> Euro
+            </div>
+            <div>
+                <label for="region">Regione:</label>
+                <select tabindex="2" id="region" name="region">
+                    <option value="none" selected disabled hidden>-- Scegli la tua regione --</option>
+                    <option value="abruzzo">Abruzzo</option>
+                    <option value="basilicata">Basilicata</option>
+                    <option value="calabria">Calabria</option>
+                    <option value="campania">Campania</option>
+                    <option value="emilia_romagna">Emilia Romagna</option>
+                    <option value="friuli_venezia_giulia">Friuli Venezia Giulia</option>
+                    <option value="lazio">Lazio</option>
+                    <option value="liguria">Liguria</option>
+                    <option value="lombardia">Lombardia</option>
+                    <option value="marche">Marche</option>
+                    <option value="molise">Molise</option>
+                    <option value="piemonte">Piemonte</option>
+                    <option value="bolzano">Provincia Autonoma di Bolzano</option>
+                    <option value="trento">Provincia Autonoma di Trento</option>
+                    <option value="puglia">Puglia</option>
+                    <option value="sardegna">Sardegna</option>
+                    <option value="sicilia">Sicilia</option>
+                    <option value="toscana">Toscana</option>
+                    <option value="umbria">Umbria</option>
+                    <option value="valle_d_aosta">Valle d'Aosta</option>
+                    <option value="veneto">Veneto</option>
+                </select>
+            </div>
+        </fieldset>
+        <fieldset>
+            <p>Agevolazioni per la famiglia</p>
+            <div>
+                <label for="has_dependent_spouse">Coniuge a carico?</label>
+                <input type="radio" name="has_dependent_spouse" value="Yes">
+                <select tabindex="3" id="has_dependent_spouse" name="has_dependent_spouse">
+                    <option value="no" selected>No</option>
+                    <option value="yes">Si</option>
+                </select>
+            </div>
+            <div>
+                <label for="children_below_3">Figli a carico di età inferiore a 3 anni:</label>
+                <input type="number" min="0" max="20" tabindex="4" value="0" id="children_below_3"
+                    name="children_below_3">
+            </div>
+            <div>
+                <label for="children_above_3">Figli a carico di età superiore a 3 anni:</label>
+                <input type="number" min="0" max="20" tabindex="5" value="0" id="children_above_3"
+                    name="children_above_3">
+            </div>
+            <div>
+                <label for="children_below_3_handicap">Figli portatori di handicap, età inferiore a 3 anni:</label>
+                <input type="number" min="0" max="20" tabindex="6" value="0" id="children_below_3_handicap"
+                    name="children_below_3_handicap">
+            </div>
+            <div>
+                <label for="children_above_3_handicap">Figli portatori di handicap, età superiore a 3 anni:</label>
+                <input type="number" min="0" max="20" tabindex="7" value="0" id="children_above_3_handicap"
+                    name="children_above_3_handicap">
+            </div>
+            <div>
+                <label for="children_percentage">Percentuale carico figli:</label>               
+                 <select tabindex="8" id="children_percentage" name="children_percentage">
+                    <option value="100" selected>100 %</option>
+                    <option value="50">50%</option>
+                </select>
+            </div>
+            <div>
+                <label for="other_relatives">Altri familiari a carico: </label>
+                <input type="number" min="0" max="20" tabindex="9" value="0" id="other_relatives"
+                    name="other_relatives">
+            </div>
+        </fieldset>
+        <fieldset>
+            <p>Tipo di contratto</p>
+            <div>
+                <label for="monthly_payments">Numero di mensilità:</label>
+                <input type="number" min="12" max="15" tabindex="10" value="13" id="monthly_payments"
+                    name="monthly_payments">
+            </div>
+            <div>
+                <label for="days_with_contract">Giorni di lavoro dipendente:</label>
+                <input type="number" min="1" max="366" tabindex="11" value="365" id="days_with_contract"
+                    name="days_with_contract">
+            </div>
+            <div>
+                <label for="has_permanent_contract">Contratto a tempo indeterminato?</label>
+                <select tabindex="12" id="has_permanent_contract" name="has_permanent_contract">
+                    <option value="yes" selected>Si</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div>
+                <input type="button" value="Calcolo Stipendio Netto" onclick="computeNetIncome()">
+            </div>
+        </fieldset>
+    </form>
+</div>

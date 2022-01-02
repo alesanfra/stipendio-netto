@@ -4,3 +4,7 @@
 
 layout: home
 ---
+
+Inserisci la RAL
+
+{% include tax_calculator.html %}

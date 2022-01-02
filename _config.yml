@@ -1,10 +1,9 @@
-title: Calcolo stipendio netto
+title: Stipendio Netto
 description: >-
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Calcolo dello stipendio netto mensile a partire dal reddito annuo lordo (RAL), senza tracker, 100% open source!
 twitter_username: alesanfra
 github_username:  alesanfra
+linkedin_username: alessiosanfratello
 
 # Build settings
 theme: minima
